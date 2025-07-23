@@ -1,64 +1,75 @@
-# 🎨 Neural Style Transfer with TensorFlow
+# 🎨 PRODIGY INFOTECH – Task 05  
+## 🎯 Neural Style Transfer
 
-## 📝 Overview
-This project demonstrates **Neural Style Transfer (NST)** — a deep learning technique that blends the **content of one image** with the **style of another**, producing a unique image that looks like a piece of art.
+This project demonstrates **Neural Style Transfer (NST)** — a deep learning technique that blends the **content of one image** with the **artistic style of another**, producing a unique image that looks like a piece of art.
 
-Implemented using **TensorFlow** and **TensorFlow Hub**, the model takes a content image (e.g., a photograph) and a style image (e.g., a painting by Kandinsky) and generates a new image combining both.
-
----
-
-## ✨ Key Features
-✅ Load and preprocess content and style images  
-✅ Apply a pre-trained NST model from TensorFlow Hub  
-✅ Convert output tensors back to images for visualization  
-✅ Experiment with different content-style combinations  
-✅ Fully executable in Google Colab
+NST leverages convolutional neural networks (CNNs) to separate and recombine content and style from input images. This implementation uses a pre-trained model from **TensorFlow Hub** to apply style transfer efficiently.
 
 ---
 
-## 🚀 How It Works
+## 🔍 Overview
 
-1. **Load Images**  
-   - `content_image`: A regular photograph (e.g., Labrador dog)  
-   - `style_image`: A piece of artwork (e.g., Kandinsky painting)
-
-2. **Preprocess Images**  
-   - Resize, normalize, and format for model input
-
-3. **Apply Style Transfer**  
-   - Use a pre-trained model from `tensorflow_hub` to apply style onto content
-
-4. **Post-process & Display**  
-   - Convert the output tensor into an image and display the result
+This task involves:
+- 🖼 Blending **content** and **style** images
+- 🧠 Using a **pre-trained model** from TensorFlow Hub
+- 🧩 Modular preprocessing and post-processing
+- 🖼 Visualizing results with `matplotlib`
+- 🧪 Testing with customizable inputs
 
 ---
 
-## 🧪 Sample Output
+## 💻 Running the Project
+
+### Prerequisites
+- Google Colab or local Jupyter environment
+- Internet access for image and model downloads
+
+### Steps
+1. Open `Task05_Style_Transfer.ipynb` in Colab
+2. Run all cells sequentially
+3. Replace default image URLs with your own if desired
+4. Observe the stylized output image
+
+---
+
+## 🛠 Features
+
+| Feature                  | Description |
+|--------------------------|-------------|
+| ✅ Pre-trained Model     | Uses TensorFlow Hub's fast style transfer model |
+| ✅ Customizable Inputs   | Supports any content and style image URLs |
+| ✅ GPU Acceleration      | Automatically uses GPU in Colab |
+| ✅ Image Display         | Integrated visualization |
+| ✅ Lightweight           | Fast inference, minimal dependencies |
+
+---
+
+## 📈 Sample Results
 
 | Content Image | Style Image | Stylized Output |
-|---------------|-------------|-----------------|
-| 🐶 Labrador   | 🖌️ Kandinsky | 🎨 Dog in Kandinsky Style |
+|---------------|-------------|------------------|
+| ![Content](content.jpg) | ![Style](style.jpg) | ![Output](stylized_output.png) |
 
 ---
 
-## 🛠 Tech Stack
-- Python 3  
-- TensorFlow 2.x  
-- TensorFlow Hub  
-- Google Colab  
-- NumPy & Matplotlib
+## 📚 References
+
+- [TensorFlow Hub Style Transfer Guide](https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2)
+- [Neural Style Transfer with TensorFlow](https://www.tensorflow.org/tutorials/generative/style_transfer)
+- [Artistic Style Transfer with Magenta](https://magenta.tensorflow.org/arbitrary-image-stylization)
 
 ---
 
-## 📂 Usage
+## 📝 Key Takeaways
 
-### 📁 Open in Google Colab
-1. Upload the notebook `Task05_Style_Transfer.ipynb` to [Google Colab](https://colab.research.google.com/)
-2. Run all cells in order
-3. Replace or add your own images if desired
+- Neural Style Transfer is a powerful example of transfer learning in generative AI.
+- TensorFlow Hub provides fast, accessible models for creative applications.
+- This system can be extended to batch processing, animation, or web demos.
 
-### 🖼 Change Input Images
-To try different images:
-```python
-content_path = tf.keras.utils.get_file('your_photo.jpg', 'image_url')
-style_path = tf.keras.utils.get_file('your_artwork.jpg', 'style_url')
+---
+
+## 🧩 Future Enhancements
+
+- Add **batch processing** for multiple image pairs
+- Implement **interactive UI** with Gradio or Streamlit
+- Export and deploy the model via **TensorFlow Serving**
