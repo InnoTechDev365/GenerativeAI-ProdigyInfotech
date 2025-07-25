@@ -1,5 +1,4 @@
-# ✅ Generative AI Internship Final Project  
-## 📚 README.md (Correctly Ordered Tasks)  
+# ✅ Generative AI Internship Final Project   
 
 ---
 
